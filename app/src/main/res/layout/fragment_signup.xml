@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_sign_up_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/header_size"
+        />
+    <EditText
+        android:id="@+id/et_enter_email"
+        android:layout_below="@id/tv_sign_up_header"
+        android:hint="@string/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/et_user_name_for_sign_up"
+        android:layout_below="@id/et_enter_email"
+        android:hint="@string/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/et_password_for_sign_up"
+        android:layout_below="@id/et_user_name_for_sign_up"
+        android:hint="@string/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/et_confirm_password"
+        android:layout_below="@id/et_password_for_sign_up"
+        android:hint="@string/confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/tv_sign_in"
+        android:layout_below="@id/et_confirm_password"
+        android:text="@string/already_have_an_account"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:id="@+id/checkbox_terms_conditions"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_conditions"
+        />
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:text="@string/sign_up_header"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
