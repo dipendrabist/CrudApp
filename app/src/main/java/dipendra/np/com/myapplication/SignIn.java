@@ -44,12 +44,6 @@ public interface OnLogInFormActivityListener{
         textViewForgetPassword=view.findViewById(R.id.tv_forget_password);
         textViewSignUp=view.findViewById(R.id.tv_sign_up);
         buttonSignIn=view.findViewById(R.id.btn_login);
-        buttonSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-performLogin();
-            }
-        });
         // Inflate the layout for this fragment
   textViewSignUp.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -66,27 +60,7 @@ performLogin();
         Activity activity=(Activity) context;
         onLogInFormActivityListener=(OnLogInFormActivityListener) activity;
     }
-    private void performLogin(){
-        String userName=editTextUserName.getText().toString();
-        String password=editTextPassword.getText().toString();
-        Call<User> call=MainActivity.apiInterface.performUserLogin(userName,password);
-        call.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                if(response.body().getResponse().equals("ok")){
-                    MainActivity.prefConfig.displayToast("Login Success..");
-//                    onLogInFormActivityListener.performLogin(response.body().getEmail());
-                } else if (response.body().getResponse().equals("failed")) {
-                MainActivity.prefConfig.displayToast("Login Failed");
 
-                }
-            }
 
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
 
-            }
-        });
-
-    }
 }

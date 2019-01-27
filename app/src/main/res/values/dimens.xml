@@ -1,3 +1,4 @@
 <resources>
     <dimen name="header_size">30sp</dimen>
+    <dimen name="splash_text_size">50sp</dimen>
 </resources>

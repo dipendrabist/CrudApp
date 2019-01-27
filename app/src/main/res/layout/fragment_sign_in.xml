@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@android:color/holo_blue_dark"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -12,51 +13,71 @@
         android:layout_height="wrap_content"
         android:text="@string/sign_in_header"
         android:textSize="@dimen/header_size"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+
         />
 
-    <EditText
-        android:id="@+id/et_user_name"
-        android:layout_centerInParent="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/user_name"
-        android:inputType="textEmailAddress"
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/linear_layout"
         android:layout_below="@id/tv_sign_in_header"
-
-        />
-
-
-    <EditText
-        android:id="@+id/et_password"
         android:layout_centerInParent="true"
-        android:layout_below="@id/et_user_name"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:background="@android:color/white"
         android:layout_height="wrap_content"
-        />
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:drawableStart="@drawable/ic_mail_blue_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_name"
+            android:inputType="textEmailAddress"
+
+            />
+
+
+        <EditText
+            android:id="@+id/et_password"
+            android:drawableStart="@drawable/ic_lock_blue_24dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tv_forget_password"
         android:text="@string/forget_password"
-        android:layout_below="@id/et_password"
+        android:layout_below="@+id/linear_layout"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
     <TextView
         android:id="@+id/tv_sign_up"
         android:text="@string/not_have_account"
-        android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/et_password"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/tv_forget_password"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
     <Button
         android:id="@+id/btn_login"
-        android:layout_alignParentBottom="true"
         android:text="@string/sign_in_header"
-        android:layout_width="match_parent"
+        android:layout_below="@id/tv_sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 </RelativeLayout>

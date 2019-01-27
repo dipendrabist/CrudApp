@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="user_name">User Name</string>
+    <string name="user_name">Name</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="forget_password">Forget Password?</string>
@@ -13,8 +13,62 @@
     <string name="pref_file">dipendra.np.com.preference_file</string>
     <string name="pref_login_status">dipendra.np.com.preference_login_status</string>
     <string name="pref_user_name">dipendra.np.com.preference_user_name</string>
-
-
+    <string name="splash_text">Welome</string>
+    <string name="tv_login">Login</string>
+    <string name="button1">Button1</string>
+    <string name="button2">Button2</string>
+    <string name="sign_in">Sign In</string>
+    <string name="et_email">Email</string>
+    <string name="et_password">Password</string>
+    <string name="tv_forgot_your_password">Forgot your password?</string>
+    <string name="hint_first_name">First name</string>
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_sign_up_password">Password</string>
+    <string name="tv_subscribe_to_updates">Subscribe for updates.</string>
+    <string name="tv_terms_conditions">By registering, you are agreeing to the \n <u>Terms &amp; Conditions</u></string>
+    <string name="tv_register">Register</string>
+    <string name="err_email_empty">Please enter a email address.</string>
+    <string name="err_email_invalid">Please enter a valid email address.</string>
+    <string name="err_password_invalid">Password must be 8 characters long &amp; include a capital letter.</string>
+    <string name="err_password_capital">Password must include a capital letter.</string>
+    <string name="err_password">Please enter a password</string>
+    <string name="welcome">Welcome to my app</string>
+    <string name="hint_state">State</string>
+    <string name="hint_salary">Salary</string>
+    <string name="username">Username</string>
+    <string name="enter_user">Enter Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="current_name">Current Name</string>
+    <string name="new_name">New Name</string>
+    <string name="name_to_del">Enter Name to delete</string>
+    <string name="home">Home</string>
+    <string name="error_occured">Error Occurred</string>
+    <string name="search">Search</string>
+    <string name="save_lists">Saved Lists</string>
+    <string name="applications">Applications</string>
+    <string name="job_alerts">Job Alerts</string>
+    <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_user">Add User</string>
+    <string name="view_data">View Data</string>
+    <string name="database">Database</string>
+    <string name="alarm">Alarm</string>
+    <string name="async_task">Async Task</string>
+    <string name="content_provider">Content Provider</string>
+    <string name="shared_preference">Shared Preferences</string>
+    <string name="operation">Choose The Operation</string>
+    <string name="text">After reopening this you will find your typed text</string>
+    <string name="enter_text">Enter The Text</string>
+    <string name="ok">Save</string>
+    <string name="name">Enter Name</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="view">View</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="stop">Stop</string>
+    <string name="enter_time_in_milliseconds">Enter Time in ms</string>
+    <string name="animation">Animation</string>
 </resources>

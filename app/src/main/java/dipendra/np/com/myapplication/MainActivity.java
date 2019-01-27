@@ -1,41 +1,48 @@
 package dipendra.np.com.myapplication;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements SignIn.OnLogInFormActivityListener {
-    public static PrefConfig prefConfig;
-    public static ApiInterface apiInterface;
+public class MainActivity extends AppCompatActivity {
+
+private Button buttonSharedPreference;
+private Button buttonDatabase;
+Button buttonAlarm;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        prefConfig = new PrefConfig(this);
-        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        if (findViewById(R.id.fragment_container) != null) {
-            if (savedInstanceState != null) {
-                return;
-            }
-            if (prefConfig.readLoginStatus()) {
-                getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new WelcomeFragment()).commit();
-            } else {
-
-                getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new SignIn()).commit();
-
-            }
-        }
-
-    }
-
+        buttonSharedPreference=findViewById(R.id.btn_shared_preference);
+        buttonDatabase=findViewById(R.id.btn_database);
+        buttonAlarm=findViewById(R.id.btn_alarm);
+buttonSharedPreference.setOnClickListener(new View.OnClickListener() {
     @Override
-    public void register() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new signup()).addToBackStack(null).commit();
+    public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this,SharedPreferenceActivity.class);
+        startActivity(intent);
+    }
+});
+buttonDatabase.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this,SQLiteActivity.class);
+        startActivity(intent);
+    }
+});
+
+buttonAlarm.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this,AlarmActivity.class);
+        startActivity(intent);
+    }
+});
+
     }
 
-    @Override
-    public void performLogin(String email) {
-        prefConfig.writeEmail(email);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new WelcomeFragment()).commit();
-    }
+
 }
