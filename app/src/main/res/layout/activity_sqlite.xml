@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatabaseActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/username"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            tools:ignore="RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:gravity="center_vertical|center"
+            android:hint="@string/enter_user"
+            android:inputType="textPersonName"
+            android:textStyle="bold|italic"
+            tools:ignore="RtlHardcoded"
+            android:importantForAutofill="no" tools:targetApi="o"/>
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:hint="@string/enter_password"
+            android:text="@string/password"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            tools:ignore="RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_password"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:gravity="center_vertical|center"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            tools:ignore="RtlHardcoded"
+            android:importantForAutofill="no" tools:targetApi="o"/>
+
+        <LinearLayout
+            android:id="@+id/ll_add_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password"
+            android:orientation="horizontal"
+            android:weightSum="2.5">
+
+            <Button
+                android:id="@+id/btn_view_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:text="@string/view_data"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" />
+
+            <Button
+                android:id="@+id/btn_add_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:text="@string/add_user"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_add_view"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/et_current_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_weight=" 1.5"
+                android:ems="10"
+                android:hint="@string/current_name"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <EditText
+                android:id="@+id/et_new_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_weight=" 1.5"
+                android:ems="10"
+                android:hint="@string/new_name"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/update"
+                android:textSize="18sp"
+                android:textStyle="italic|bold" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_del_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_update"
+            android:layout_marginStart="7dp"
+            android:layout_toStartOf="@+id/btn_del"
+            android:hint="@string/name_to_del"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:importantForAutofill="no" tools:targetApi="o"/>
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_update"
+            android:layout_alignParentEnd="true"
+            android:text="@string/delete"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+</ScrollView>
